@@ -7,6 +7,10 @@ html{
     font-family: "Open Sans", Helvetica;
 }
 
+button::-moz-focus-inner {
+  border: 0;
+}
+
 
 div.calcBody{
   height: 700px;
@@ -34,9 +38,64 @@ div.buttonHead{
   background-color: #f0750f;
 }
 
+div.buttonHead button{
+  float: left;
+  width: 250px;
+  height: 100px;
+  border-radius: 0px;
+  background-color: Transparent;
+  outline: none;
+  border: none;
+  transition: 0.25s;
+  font-size: 24pt;
+  color: white;
+}
+div.buttonHead button:hover{
+  background-color: #fcbc6e;
+}
+div.buttonHead button:active{
+  background-color: Transparent;
+}
+
+
+
 div.buttonMain{
   height:450px;
-  width:400px;
+  width:500px;
 
-  background-color: #555555;
+  background-color: #2c2b33;
+}
+
+div.input{
+  height:450px;
+  width:375px;
+  float: left;
+}
+
+div.operators{
+  height:450px;
+  width:125px;
+  background-color: grey;
+  float: left;
+}
+
+div.buttonMain button{
+  float: left;
+  width: 125px;
+  height: 112px;
+  border-radius: 0px;
+  background-color: Transparent;
+  outline: none;
+  border: none;
+  transition: 0.25s;
+  font-size: 24pt;
+  color: white;
+}
+
+div.buttonMain button:hover{
+  background-color: darkgrey;
+}
+
+div.buttonMain button:active{
+  background-color: Transparent;
 }
