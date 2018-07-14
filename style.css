@@ -27,7 +27,10 @@ div.calcBody{
 div.screen{
   height: 150px;
   width:500px;
-
+  font-size: 50pt;
+  text-align: right;
+  padding: 10px;
+  padding-top:20px;
   background-color: white;
 }
 
