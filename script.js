@@ -79,15 +79,18 @@ cancButton.addEventListener('click', reset);
 
 //listens for clicks on any of the input buttons
 inputButtons.forEach(button => button.addEventListener('click', function(){
-  if (operationEntered === false){
-    firstNumber += button.textContent; //builds firstNumber as long as needed
-    firstNumberEntered = true; //sets flag
-    screen.textContent = firstNumber; //populates screen
-  } else { // i.e. once the operation has been entered
-    secondNumber += button.textContent;
-    secondNumberEntered = true; //builds secondNumber as long as needed
-    screen.textContent = firstNumber + " " + operation + " " + secondNumber;
+  if (screen.textContent.length < 12){
+    if (operationEntered === false){
+      firstNumber += button.textContent; //builds firstNumber as long as needed
+      firstNumberEntered = true; //sets flag
+      screen.textContent = firstNumber; //populates screen
+    } else { // i.e. once the operation has been entered
+      secondNumber += button.textContent;
+      secondNumberEntered = true; //builds secondNumber as long as needed
+      screen.textContent = firstNumber + " " + operation + " " + secondNumber;
+    }
   }
+
 }));
 
 //listens for clicks on any of the operator buttons
