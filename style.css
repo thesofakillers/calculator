@@ -31,38 +31,39 @@ div.screen{
   background-color: white;
 }
 
-div.buttonHead{
-  height: 100px;
-  width:500px;
-
-  background-color: #f0750f;
-}
-
-div.buttonHead button{
+button{
   float: left;
-  width: 250px;
-  height: 100px;
   border-radius: 0px;
   background-color: Transparent;
   outline: none;
   border: none;
-  transition: 0.25s;
+  transition: 0.3s;
   font-size: 24pt;
   color: white;
+}
+
+
+
+div.buttonHead{
+  height: 100px;
+  width:500px;
+  background-color: #f0750f;
+}
+
+div.buttonHead button{
+  width: 250px;
+  height: 100px;
 }
 div.buttonHead button:hover{
   background-color: #fcbc6e;
 }
-div.buttonHead button:active{
-  background-color: Transparent;
-}
+
 
 
 
 div.buttonMain{
   height:450px;
   width:500px;
-
   background-color: #2c2b33;
 }
 
@@ -80,22 +81,13 @@ div.operators{
 }
 
 div.buttonMain button{
-  float: left;
   width: 125px;
-  height: 112px;
-  border-radius: 0px;
-  background-color: Transparent;
-  outline: none;
-  border: none;
-  transition: 0.25s;
-  font-size: 24pt;
-  color: white;
+  height: 112.5px;
 }
 
 div.buttonMain button:hover{
   background-color: darkgrey;
 }
-
-div.buttonMain button:active{
+div.buttonMain button:active, div.buttonHead button:active{
   background-color: Transparent;
 }
