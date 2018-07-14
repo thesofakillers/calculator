@@ -4,8 +4,10 @@ var operation;
 var firstNumberEntered;
 var operationEntered;
 var secondNumberEntered;
+var screenArray;
 const screen = document.querySelector("div.screen");
 const cancButton = document.querySelector("button#canc");
+const delButton = document.querySelector("button#del")
 const inputButtons = document.querySelectorAll(".notEquals button");
 const operatorButtons = document.querySelectorAll(".operators button");
 const equalsButton = document.querySelector("button#equals")
@@ -13,8 +15,8 @@ const equalsButton = document.querySelector("button#equals")
 function reset(){
   firstNumber ="";
   secondNumber = "";
-
   operation = "";
+
   firstNumberEntered = false;
   operationEntered = false;
   secondNumberEntered = false;
@@ -39,6 +41,32 @@ function compute(a, b, op){
 
 reset();
 
+delButton.addEventListener('click', function(){
+  screen.textContent = screen.textContent.slice(0, -1).trim();
+
+  screenArray = screen.textContent.split(" ")
+
+  if (screenArray.length < 1){
+    reset()
+  } else if (screenArray.length === 1){
+    reset()
+    firstNumber = screenArray[0]
+    firstNumberEntered = true;
+  } else if(screenArray.length === 2){
+    reset()
+    firstNumber = screenArray[0]
+    operation = screenArray[1]
+    firstNumberEntered = true;
+    operationEntered = true;
+  } else if (screenArray.length === 3){
+    firstNumber = screenArray[0]
+    operation = screenArray[1]
+    secondNumber = screenArray[2]
+
+  }
+  screen.textContent = screenArray.join(" ");
+  screenArray = null;
+})
 
 cancButton.addEventListener('click', reset);
 
